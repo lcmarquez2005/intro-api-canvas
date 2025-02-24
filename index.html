@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas en Bootstrap</title>
+    <!-- Enlace a Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Card con sombra y borde gris claro -->
+                <div class="card shadow-lg border border-light">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h5 class="m-0">Dibujo en Canvas</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <!-- Canvas con un tamaño adecuado -->
+                        <canvas id="canvas" width="300" height="500"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript para dibujar en el canvas -->
+    <script>
+        // Obtener el elemento <canvas>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // Definir el color de relleno en formato RGB
+        ctx.fillStyle = "rgb(0, 128, 255)"; // Azul verdoso
+
+        // Dibujar un rectángulo en el canvas
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
+
+    <!-- Bootstrap JS (opcional si necesitas funcionalidad adicional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
